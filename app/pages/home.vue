@@ -24,10 +24,13 @@
 <template>
   <IonPage>
     <template v-if="getTitle(appSection)">
-      <Header :title="getTitle(appSection)" />
+      <AppTabsToolbar
+        :title="getTitle(appSection)"
+        showBackButton
+      />
     </template>
     <IonContent>
-      <AppSection
+      <AppTabsLayout
         :appSection="appSection"
         :tabs="tabs"
       />

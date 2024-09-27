@@ -2,7 +2,7 @@
 
 <template>
   <IonPage>
-    <Header
+    <AppTabsToolbar
       title="Edit Profile"
       showBackButton
     />

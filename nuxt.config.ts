@@ -7,11 +7,22 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
 
-  modules: ["@nuxtjs/ionic", "@nuxt/icon"],
+  modules: [
+    "@nuxtjs/ionic",
+    "@nuxt/icon",
+    "@nuxt/image",
+    "@nuxtjs/tailwindcss",
+  ],
   ssr: false,
   ionic: {
     css: {
       utilities: true,
     },
+  },
+
+  routeRules: {
+    "/": { redirect: "/home" },
+    "/talent": { redirect: "/talent/home" },
+    "/host": { redirect: "/host/home" },
   },
 })

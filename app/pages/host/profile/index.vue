@@ -1,5 +1,5 @@
 <template>
   <IonPage>
-    <IonContent> <p>Overview</p> </IonContent>
+    <IonContent> Profile</IonContent>
   </IonPage>
 </template>

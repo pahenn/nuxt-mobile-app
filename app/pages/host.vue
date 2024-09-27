@@ -9,12 +9,12 @@
     {
       tab: "explore",
       icon: ioniconsSearchOutline,
-      label: "Find Talent",
+      label: "Explore",
     },
     {
-      tab: "bookings",
+      tab: "events",
       icon: ioniconsCalendarOutline,
-      label: "Upcoming",
+      label: "My Events",
     },
     {
       tab: "messages",
@@ -32,16 +32,19 @@
     const route = useRoute()
     return tabs.find((tab) => `${tabBarKey}-${tab.tab}` === route.name)?.label
   }
-  const appSection = "home"
+  const appSection = "host"
 </script>
 
 <template>
   <IonPage>
     <template v-if="getTitle(appSection)">
-      <Header :title="getTitle(appSection)" />
+      <AppTabsToolbar
+        :title="getTitle(appSection)"
+        showBackButton
+      />
     </template>
     <IonContent>
-      <AppSection
+      <AppTabsLayout
         :appSection="appSection"
         :tabs="tabs"
       />

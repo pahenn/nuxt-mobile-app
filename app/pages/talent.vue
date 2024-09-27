@@ -7,14 +7,14 @@
       label: "Home",
     },
     {
-      tab: "explore",
+      tab: "listings",
       icon: ioniconsSearchOutline,
-      label: "Find Work",
+      label: "Find Events",
     },
     {
-      tab: "jobs",
+      tab: "bookings",
       icon: ioniconsCalendarOutline,
-      label: "Jobs",
+      label: "My Bookings",
     },
     {
       tab: "messages",
@@ -39,10 +39,13 @@
 <template>
   <IonPage>
     <template v-if="getTitle(appSection)">
-      <Header :title="getTitle(appSection)" />
+      <AppTabsToolbar
+        :title="getTitle(appSection)"
+        showBackButton
+      />
     </template>
     <IonContent>
-      <AppSection
+      <AppTabsLayout
         :appSection="appSection"
         :tabs="tabs"
       />
