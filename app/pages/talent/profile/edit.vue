@@ -2,7 +2,10 @@
 
 <template>
   <IonPage>
-    <Header title="Edit Profile" />
+    <Header
+      title="Edit Profile"
+      showBackButton
+    />
     <IonContent> Edit Profile </IonContent>
   </IonPage>
 </template>
