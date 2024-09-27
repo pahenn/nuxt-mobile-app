@@ -12,11 +12,21 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/image",
     "@nuxtjs/tailwindcss",
+    "@pinia/nuxt",
   ],
   ssr: false,
   ionic: {
     css: {
       utilities: true,
+    },
+  },
+  runtimeConfig: {
+    public: {
+      directus: {
+        url: "", // set as environment variable
+        readMe:
+          "id, email, first_name, last_name, avatar, bio, workspaces.workspaces_id.*",
+      },
     },
   },
 
