@@ -7,7 +7,7 @@
       label: "Home",
     },
     {
-      tab: "listings",
+      tab: "events",
       icon: ioniconsSearchOutline,
       label: "Find Events",
     },

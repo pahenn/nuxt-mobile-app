@@ -12,9 +12,16 @@
 
 <template>
   <IonCard>
-    <IonImg
+    <NuxtImg
+      v-if="imageUrl"
+      provider="directus"
       :alt="title"
-      :src="imageUrl || defaultImageUrl"
+      :src="imageUrl"
+    />
+    <NuxtImg
+      v-else
+      :alt="title"
+      src="defaultImageUrl"
     />
     <IonCardHeader>
       <IonCardTitle>{{ title }}</IonCardTitle>
