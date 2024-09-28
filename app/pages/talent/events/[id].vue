@@ -8,6 +8,6 @@
       :title="`Event ${id}`"
       showBackButton
     />
-    <IonContent> Event {{ id }} </IonContent>
+    <IonContent class="ion-padding"> </IonContent>
   </IonPage>
 </template>
